@@ -11,6 +11,6 @@ vpms_ip: 192.168.1.8
 ##
 ##the following dbpath definition ../../../IABDB will equate to a directory
 ##that is a sibling of the directory that owns the ruby app
-dbpath: "/Users/mawdo/WIP/IABDB"
+dbpath: "../../IABDB"
 dbcontainer: "quotes.dbxml"
 DSL_ROOT: "/Users/mawdo/WIP/IAB/RailsApp/app/dynamic/products"
