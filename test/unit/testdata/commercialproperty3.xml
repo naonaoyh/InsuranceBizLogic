@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:tns="http://com/csc/dip/webservice/core/"
+    xmlns:types="http://com/csc/dip/webservice/core/encodedTypes"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:q1="http://core.webservice.dip.csc.com">
+    <soap:Body soap:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+        <tns:process>
+            <in0 href="#id1"/>
+        </tns:process>
+        <soapenc:Array id="id1" soapenc:arrayType="q1:ProductRequest[1]">
+            <Item href="#id3"/>
+        </soapenc:Array>
+        <q1:ProductRequest id="id3" xsi:type="q1:ProductRequest">
+            <productName xsi:type="xsd:string">CommercialPropertyProduct</productName>
+            <store xsi:type="xsd:boolean">false</store>
+            <traceMode xsi:type="xsd:boolean">false</traceMode>
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <actions href="#id5"/>
+        </q1:ProductRequest>
+        <q1:SetAction id="id8" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string">A_CommercialProperty_CommercialProperty_Brand</name>
+            <value xsi:type="xsd:string">FC</value>
+        </q1:SetAction>
+        <q1:SetAction id="id9" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string">A_CommercialProperty_CommercialProperty_Package</name>
+            <value xsi:type="xsd:string">Retailer</value>
+        </q1:SetAction>
+        <q1:SetAction id="id10" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_CommercialProperty_GlassCover_CoverDetail_SumInsured_Amount</name>
+            <value xsi:type="xsd:string">1000000</value>
+        </q1:SetAction>
+        <q1:SetAction id="id11" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_CommercialProperty_ContentsCover_CoverDetail_TargetStock_SumInsured_Amount</name>
+            <value xsi:type="xsd:string">1000</value>
+        </q1:SetAction>
+        <q1:SetAction id="id12" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_CommercialProperty_ContentsCover_CoverDetail_OtherStock_SumInsured_Amount</name>
+            <value xsi:type="xsd:string">10000</value>
+        </q1:SetAction>
+        <q1:SetAction id="id13" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_CommercialProperty_ContentsCover_CoverDetail_OtherContents_SumInsured_Amount</name>
+            <value xsi:type="xsd:string">20000</value>
+        </q1:SetAction>
+        <q1:SetAction id="id14" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_CommercialProperty_LossOfLicenceCover_CoverDetail_SumInsured_Amount</name>
+            <value xsi:type="xsd:string">1000000</value>
+        </q1:SetAction>
+        <q1:SetAction id="id15" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_CommercialProperty_MoneyCover_CoverDetail_SumInsured_Amount</name>
+            <value xsi:type="xsd:string">1000000</value>
+        </q1:SetAction>
+        <q1:SetAction id="id16" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_CommercialProperty_BuildingsCover_CoverRequiredInd_Value</name>
+            <value xsi:type="xsd:string">0</value>
+        </q1:SetAction>
+        <q1:SetAction id="id17" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_CommercialProperty_BuildingsCover_CoverDetail_TenantsImprovements_CoverDetail_SumInsured_Amount</name>
+            <value xsi:type="xsd:string">1000000</value>
+        </q1:SetAction>
+        <q1:SetAction id="id18" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_CommercialProperty_BuildingsCover_CoverDetail_ShopFront_CoverDetail_SumInsured_Amount</name>
+            <value xsi:type="xsd:string">1000000</value>
+        </q1:SetAction>
+        <q1:SetAction id="id19" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_CommercialProperty_BookDebtsCover_CoverDetail_SumInsured_Amount</name>
+            <value xsi:type="xsd:string">1000000</value>
+        </q1:SetAction>
+        <q1:SetAction id="id20" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string">A_CommercialProperty_CommercialProperty_Insured_CompanyName</name>
+            <value xsi:type="xsd:string">gggg7</value>
+        </q1:SetAction>
+        <q1:SetAction id="id21" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_CommercialProperty_Insured_Address_Line_Value</name>
+            <value xsi:type="xsd:string">1</value>
+        </q1:SetAction>
+        <q1:SetAction id="id22" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_CommercialProperty_Insured_Trade_Code_ShortDescription_Value</name>
+            <value xsi:type="xsd:string">1</value>
+        </q1:SetAction>
+        <q1:SetAction id="id23" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_CommercialProperty_Insured_CompanyStatusCode_ShortDescription_Value</name>
+            <value xsi:type="xsd:string">1</value>
+        </q1:SetAction>
+        <q1:SetAction id="id24" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_CommercialProperty_ProductLiabilityCover_CoverDetail_SumInsured_Amount</name>
+            <value xsi:type="xsd:string">1000000</value>
+        </q1:SetAction>
+        <q1:SetAction id="id25" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_CommercialProperty_BusinessInterruptionCover_CoverDetail_SumInsured_Amount</name>
+            <value xsi:type="xsd:string">1000000</value>
+        </q1:SetAction>
+        <q1:SetAction id="id26" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_CommercialProperty_PublicLiabilityCover_CoverDetail_SumInsured_Amount</name>
+            <value xsi:type="xsd:string">1000000</value>
+        </q1:SetAction>
+        <q1:SetAction id="id27" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_CommercialProperty_EmployersLiabilityCover_CoverDetail_SumInsured_Amount</name>
+            <value xsi:type="xsd:string">1000000</value>
+        </q1:SetAction>
+        <q1:ComputeAction id="id28" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_GlassCover_PremiumQuoteBreakdown_IPTAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id29" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_GlassCover_PremiumQuoteBreakdown_IPTPercent</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id30" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_GlassCover_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id31" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_ContentsCover_CoverDetail_PremiumQuoteBreakdown_IPTAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id32" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_ContentsCover_CoverDetail_PremiumQuoteBreakdown_IPTPercent</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id33" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_ContentsCover_CoverDetail_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id34" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_ContentsCover_CoverDetail_PremiumQuoteBreakdown_Amount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id35" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_LossOfLicenceCover_CoverDetail_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id36" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_LossOfLicenceCover_CoverDetail_PremiumQuoteBreakdown_IPTAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id37" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_LossOfLicenceCover_CoverDetail_PremiumQuoteBreakdown_IPTPercent</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id38" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_MoneyCover_PremiumQuoteBreakdown_IPTAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id39" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_MoneyCover_PremiumQuoteBreakdown_IPTPercent</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id40" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_MoneyCover_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id41" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_MoneyCover_AssaultCover_CoverDetail_PremiumQuoteBreakdown_IPTAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id42" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_MoneyCover_AssaultCover_CoverDetail_PremiumQuoteBreakdown_IPTPercent</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id43" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_MoneyCover_AssaultCover_CoverDetail_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id44" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_MoneyCover_CoverDetail_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id45" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_MoneyCover_CoverDetail_PremiumQuoteBreakdown_IPTAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id46" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_MoneyCover_CoverDetail_PremiumQuoteBreakdown_IPTPercent</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id47" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BuildingsCover_CoverDetail_AdditionalCover_PremiumQuoteBreakdown_IPTAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id48" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BuildingsCover_CoverDetail_AdditionalCover_PremiumQuoteBreakdown_IPTPercent</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id49" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BuildingsCover_CoverDetail_AdditionalCover_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id50" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BuildingsCover_CoverDetail_PremiumQuoteBreakdown_IPTAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id51" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BuildingsCover_CoverDetail_PremiumQuoteBreakdown_IPTPercent</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id52" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BuildingsCover_CoverDetail_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id53" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BuildingsCover_CoverDetail_PremiumQuoteBreakdown_Amount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id54" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BuildingsCover_PremiumQuoteBreakdown_Amount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id55" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BuildingsCover_PremiumQuoteBreakdown_IPTAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id56" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BuildingsCover_PremiumQuoteBreakdown_IPTPercent</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id57" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BuildingsCover_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id58" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BookDebtsCover_CoverDetail_PremiumQuoteBreakdown_IPTAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id59" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BookDebtsCover_CoverDetail_PremiumQuoteBreakdown_IPTPercent</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id60" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BookDebtsCover_CoverDetail_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id61" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_ProductLiabilityCover_CoverDetail_PremiumQuoteBreakdown_IPTAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id62" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_ProductLiabilityCover_CoverDetail_PremiumQuoteBreakdown_IPTPercent</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id63" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_ProductLiabilityCover_CoverDetail_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id64" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BusinessInterruptionCover_CoverDetail_PremiumQuoteBreakdown_IPTPercent</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id65" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BusinessInterruptionCover_CoverDetail_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id66" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BusinessInterruptionCover_CoverDetail_PremiumQuoteBreakdown_Amount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id67" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BusinessInterruptionCover_CoverDetail_PremiumQuoteBreakdown_IPTAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id68" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BusinessInterruptionCover_AdditionalCover_PremiumQuoteBreakdown_IPTAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id69" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BusinessInterruptionCover_AdditionalCover_PremiumQuoteBreakdown_IPTPercent</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id70" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BusinessInterruptionCover_AdditionalCover_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id71" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BusinessInterruptionCover_PremiumQuoteBreakdown_IPTAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id72" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BusinessInterruptionCover_PremiumQuoteBreakdown_IPTPercent</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id73" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BusinessInterruptionCover_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id74" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_BusinessInterruptionCover_PremiumQuoteBreakdown_Amount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id75" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_PublicLiabilityCover_CoverDetail_PremiumQuoteBreakdown_IPTAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id76" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_PublicLiabilityCover_CoverDetail_PremiumQuoteBreakdown_IPTPercent</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id77" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_PublicLiabilityCover_CoverDetail_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id78" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_PremiumQuoteBreakdown_Amount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id79" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_PremiumQuoteBreakdown_IPTAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id80" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_PremiumQuoteBreakdown_IPTPercent</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id81" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id82" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_EmployersLiabilityCover_CoverDetail_PremiumQuoteBreakdown_IPTPercent</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id83" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_EmployersLiabilityCover_CoverDetail_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id84" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_EmployersLiabilityCover_CoverDetail_PremiumQuoteBreakdown_Amount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id85" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_EmployersLiabilityCover_CoverDetail_PremiumQuoteBreakdown_IPTAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id86" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_Policy_PremiumQuoteBreakdown_IPTPercent</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id87" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_Policy_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id88" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_Policy_PremiumQuoteBreakdown_Amount</name>
+        </q1:ComputeAction>
+        <q1:ComputeAction id="id89" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_CommercialProperty_Policy_PremiumQuoteBreakdown_IPTAmount</name>
+        </q1:ComputeAction>
+        <soapenc:Array id="id5" soapenc:arrayType="q1:VpmsAction[1]">
+            <Item href="#id8"/>
+            <Item href="#id9"/>
+            <Item href="#id10"/>
+            <Item href="#id11"/>
+            <Item href="#id12"/>
+            <Item href="#id13"/>
+            <Item href="#id14"/>
+            <Item href="#id15"/>
+            <Item href="#id16"/>
+            <Item href="#id17"/>
+            <Item href="#id18"/>
+            <Item href="#id19"/>
+            <Item href="#id20"/>
+            <Item href="#id21"/>
+            <Item href="#id22"/>
+            <Item href="#id23"/>
+            <Item href="#id24"/>
+            <Item href="#id25"/>
+            <Item href="#id26"/>
+            <Item href="#id27"/>
+            <Item href="#id28"/>
+            <Item href="#id29"/>
+            <Item href="#id30"/>
+            <Item href="#id31"/>
+            <Item href="#id32"/>
+            <Item href="#id33"/>
+            <Item href="#id34"/>
+            <Item href="#id35"/>
+            <Item href="#id36"/>
+            <Item href="#id37"/>
+            <Item href="#id38"/>
+            <Item href="#id39"/>
+            <Item href="#id40"/>
+            <Item href="#id41"/>
+            <Item href="#id42"/>
+            <Item href="#id43"/>
+            <Item href="#id44"/>
+            <Item href="#id45"/>
+            <Item href="#id46"/>
+            <Item href="#id47"/>
+            <Item href="#id48"/>
+            <Item href="#id49"/>
+            <Item href="#id50"/>
+            <Item href="#id51"/>
+            <Item href="#id52"/>
+            <Item href="#id53"/>
+            <Item href="#id54"/>
+            <Item href="#id55"/>
+            <Item href="#id56"/>
+            <Item href="#id57"/>
+            <Item href="#id58"/>
+            <Item href="#id59"/>
+            <Item href="#id60"/>
+            <Item href="#id61"/>
+            <Item href="#id62"/>
+            <Item href="#id63"/>
+            <Item href="#id64"/>
+            <Item href="#id65"/>
+            <Item href="#id66"/>
+            <Item href="#id67"/>
+            <Item href="#id68"/>
+            <Item href="#id69"/>
+            <Item href="#id70"/>
+            <Item href="#id71"/>
+            <Item href="#id72"/>
+            <Item href="#id73"/>
+            <Item href="#id74"/>
+            <Item href="#id75"/>
+            <Item href="#id76"/>
+            <Item href="#id77"/>
+            <Item href="#id78"/>
+            <Item href="#id79"/>
+            <Item href="#id80"/>
+            <Item href="#id81"/>
+            <Item href="#id82"/>
+            <Item href="#id83"/>
+            <Item href="#id84"/>
+            <Item href="#id85"/>
+            <Item href="#id86"/>
+            <Item href="#id87"/>
+            <Item href="#id88"/>
+            <Item href="#id89"/>
+            <Item href="#id89"/>
+        </soapenc:Array>
+    </soap:Body>
+</soap:Envelope>

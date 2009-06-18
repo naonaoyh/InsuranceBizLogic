@@ -1,0 +1,36 @@
+Set up Sandbox Paypal account at https://www.paypal.com/IntegrationCenter/ic_sandbox.html
+
+gmail account: Kube Developer kuboid.paypal / 
+Secondary email: steve.meyfroidt@gmail.com (security question: first phone number / 5973)
+
+Paypal developer login for https://www.paypal.com/IntegrationCenter/ic_sandbox.html: kuboid.paypal@gmail.com / 
+
+Then in Paypal sandbox (from https://developer.paypal.com/)
+Create:
+* Test UK buyer account: kuboid_1208163303_per@gmail.com / 208163272
+* Test UK seller account: kuboid_1208163452_biz@gmail.com / 208163409  (and then ‘enable’ it?!)
+* Test US seller account: kuboid_1208170947_biz@gmail.com / 208170919 (enable it: this is a verified account)
+ * API Username:	kuboid_1208170947_biz_api1.gmail.com
+ * API Password:	1208170953
+ * Signature:		AMVR2Do.R-utyMm2sFyqPkqVzWDzAn4yKS9xT07kyzoyj5DFPG-wh53q
+
+
+*****
+*****
+NOTE: UK seller accounts can't be verified as of 14/4/08, so use a US account for now instead.
+*****
+*****
+
+Log into business account in the sandbox then Profile -> Account Info -> API access
+
+
+
+
+
+Paypal API notes:
+www.activemerchant.org
+www.codyfauser.com article on PayPal PayPal Express Payments with ActiveMerchant
+
+
+Note on Authorize.net instead of Paypal using ActiveMerchant
+http://www.misuse.org/science/2007/12/13/using-activemerchant-to-process-credit-cards-in-rubyrails/

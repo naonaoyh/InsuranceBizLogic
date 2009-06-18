@@ -1,0 +1,3 @@
+./buildall.sh --build-one=xerces --prefix=/usr/local/BDB/xerces-2.8.0
+./buildall.sh --build-one=xqilla --prefix=/usr/local/BDB/xqilla-2.1.2 --with-xerces-prefix=/usr/local/BDB/xerces-2.8.0
+./buildall.sh --build-one=dbxml --prefix=/usr/local/BDB/dbxml-2.4.13 --with-xerces-prefix=/usr/local/BDB/xerces-2.8.0 --with-xqilla-prefix=/usr/local/BDB/xqilla-2.1.2 --with-berkeleydb-prefix=/usr/local/BDB/db-4.6.21

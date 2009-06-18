@@ -1,0 +1,28 @@
+declare namespace xupdate="http://www.xmldb.org/xupdate";
+for $result in collection("quotes.dbxml")/ShopPackageQuoteNBRq
+where $result//CompanyName = "K1"
+return
+(
+    concat(
+    "@rowHash = {",
+    "'companyname' => '",$result//CompanyName/string(),"',",
+    "'postcode' => '",$result//Insured//Postcode/string(),"',",
+    "'key' => '", $result/dbxml:metadata("dbxml:name"),"',"),
+    "'mtas' => [",		
+    for $mtas in collection("quotes.dbxml")/MTAS/MTA,
+         $mta in collection("quotes.dbxml")
+    where $mtas/dbxml:metadata("dbxml:name") = concat($result/dbxml:metadata("dbxml:name"),"MTAS")
+    and $mta/dbxml:metadata("dbxml:name") = $mtas/@key
+    return (
+                concat(
+                  "{",
+                 "'AD' => '",$mtas/@appliedDateTime/string(),"',",
+                 "'SD' => '",$mtas/@startDateTime/string(),"',",
+                 "'ED' => '",$mtas/@endDateTime/string(),"',",
+                 "'RB' => '",$mtas/@rolledBack/string(),"',",
+                 "'Changes' => '",$mta//xupdate:update/@select," -to- ",$mta//xupdate:update/string(),"'",
+                "},"
+                )
+            ),
+    "]}"
+)

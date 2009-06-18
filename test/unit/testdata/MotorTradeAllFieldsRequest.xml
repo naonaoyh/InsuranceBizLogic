@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<PolMessage Type="TransactionRequest" Version="1">
+<Dictionary DictName="UKCommercial" DictVer="4420" DictType="Traditional"/>
+<Transaction EffectiveDate="17/7/2007" TranName="QuoteDetail"/>
+<Schemes>
+<Scheme Ref="Motor_Trade"/>
+ </Schemes>
+<PolData Type="Request" Selection="AllOutput"/>
+<PolData Type = "Input">
+<Cover>
+     <Cover_CommissionStandardForCoverByBroker Val="0"/>
+     <Cover_SiAmt Val="3000000"/>
+     <Cover_Code Val="B205 L14"/>
+</Cover>
+<Cover>
+     <Cover_SiAmt Val="5000000"/>
+     <Cover_Code Val="B205 L20"/>
+     <Cover_CommissionStandardForCoverByBroker Val="0"/>
+     <CoverBreakdown>
+         <CoverBreakdown_Code Val="B205 160"/>
+         <CoverBreakdown_SiAmt Val="2000000"/>
+     </CoverBreakdown>
+     <CoverBreakdown>
+         <CoverBreakdown_Code Val="B550 407"/>
+         <CoverBreakdown_SiAmt Val="150000"/>
+     </CoverBreakdown>
+     <CoverBreakdown>
+         <CoverBreakdown_Code Val="B550 568"/>
+         <CoverBreakdown_SiAmt Val="30000"/>
+     </CoverBreakdown>
+</Cover>
+<Cover>
+     <Cover_SiAmt Val="150000"/>
+     <Cover_Code Val="B205 038"/>
+     <Cover_IndemnityPeriodInMonths Val="12"/>
+     <Cover_CommissionStandardForCoverByBroker Val="0"/>
+</Cover>
+<Cover>
+     <Cover_CommissionStandardForCoverByBroker Val="0"/>
+     <Cover_Code Val="B205 P03"/>
+     <Cover_BasisCode Val="B506 100"/>
+</Cover>
+<Cover>
+     <Cover_Code Val="B205 P03"/>
+</Cover>
+<InsuranceHistory>
+       <NcdClaimed>
+         <NcdClaimed_Years Val="0"/>
+       </NcdClaimed>
+</InsuranceHistory>
+     <Premises>
+         <Premises_PostcodeSector Val="P1 CV21 1"/>
+         <Premises_InsuredObjectRef Val="1"/>
+         <Premises_NoOfHoseReels Val="0"/>
+         <PremisesCover>
+             <PremisesCover_Code Val="B205 X37" />
+             <PremisesCover_ExcessAmt Val="500"/>
+             <PremisesCoverBreakdown>
+                 <PremisesCoverBreakdown_SiAmt Val="5000000"/>
+                 <PremisesCoverBreakdown_Code Val="B205 B01" />
+             </PremisesCoverBreakdown>
+             <PremisesCoverBreakdown>
+                 <PremisesCoverBreakdown_SiAmt Val="20000"/>
+                 <PremisesCoverBreakdown_Code Val="B550 395" />
+             </PremisesCoverBreakdown>
+             <PremisesCoverBreakdown>
+                 <PremisesCoverBreakdown_SiAmt Val="10000"/>
+                 <PremisesCoverBreakdown_Code Val="B550 019" />
+             </PremisesCoverBreakdown>
+             <PremisesCoverBreakdown>
+                 <PremisesCoverBreakdown_SiAmt Val="20"/>
+                 <PremisesCoverBreakdown_Code Val="B550 001" />
+             </PremisesCoverBreakdown>
+             <PremisesCoverBreakdown>
+                 <PremisesCoverBreakdown_SiAmt Val="500"/>
+                 <PremisesCoverBreakdown_Code Val="B550 409" />
+             </PremisesCoverBreakdown>
+             <PremisesCoverBreakdown>
+                 <PremisesCoverBreakdown_SiAmt Val="10000"/>
+                 <PremisesCoverBreakdown_Code Val="B550 464" />
+             </PremisesCoverBreakdown>
+             <PremisesCoverBreakdown>
+                 <PremisesCoverBreakdown_SiAmt Val="1000"/>
+                 <PremisesCoverBreakdown_Code Val="B205 E08" />
+             </PremisesCoverBreakdown>
+             <PremisesCoverBreakdown>
+                 <PremisesCoverBreakdown_SiAmt Val="5000"/>
+                 <PremisesCoverBreakdown_Code Val="B205 O05" />
+             </PremisesCoverBreakdown>
+             <PremisesCoverBreakdown>
+                 <PremisesCoverBreakdown_SiAmt Val="1500000"/>
+                 <PremisesCoverBreakdown_Code Val="B550 555" />
+                 <PremisesCoverBreakdown_SiPercentage Val="50"/>
+             </PremisesCoverBreakdown>
+             <PremisesCoverBreakdown>
+                 <PremisesCoverBreakdown_SiAmt Val="1500000"/>
+                 <PremisesCoverBreakdown_SiPercentage Val="30"/>
+                 <PremisesCoverBreakdown_Code Val="B550 556" />
+             </PremisesCoverBreakdown>
+             <PremisesCoverBreakdown>
+                 <PremisesCoverBreakdown_SiAmt Val="1500000"/>
+                 <PremisesCoverBreakdown_SiPercentage Val="20"/>
+                 <PremisesCoverBreakdown_Code Val="B550 557" />
+             </PremisesCoverBreakdown>
+             <PremisesCoverBreakdown>
+                 <PremisesCoverBreakdown_SiAmt Val="500"/>
+                 <PremisesCoverBreakdown_Code Val="B550 400" />
+             </PremisesCoverBreakdown>
+         </PremisesCover>
+         <PremisesCover>
+             <PremisesCover_Code Val="B205 G06" />
+             <PremisesCoverBreakdown>
+                 <PremisesCoverBreakdown_SiAmt Val="2500"/>
+                 <PremisesCoverBreakdown_Code Val="B550 464" />
+             </PremisesCoverBreakdown>
+         </PremisesCover>
+         <PremisesCover>
+             <PremisesCover_Code Val="B205 162" />
+         </PremisesCover>
+         <PremisesCover>
+
+             <PremisesCover_Code Val="B205 M11" />
+             <PremisesCoverBreakdown>
+                 <PremisesCoverBreakdown_SiAmt Val="1500"/>
+                 <PremisesCoverBreakdown_Code Val="B205 M05" />
+             </PremisesCoverBreakdown>
+             <PremisesCoverBreakdown>
+                 <PremisesCoverBreakdown_SiAmt Val="500"/>
+                 <PremisesCoverBreakdown_Code Val="B205 M12" />
+             </PremisesCoverBreakdown>
+             <PremisesCoverBreakdown>
+                 <PremisesCoverBreakdown_SiAmt Val="500"/>
+                 <PremisesCoverBreakdown_Code Val="B205 M02" />
+             </PremisesCoverBreakdown>
+             <PremisesCoverBreakdown>
+                 <PremisesCoverBreakdown_SiAmt Val="1500"/>
+                 <PremisesCoverBreakdown_Code Val="B205 240" />
+             </PremisesCoverBreakdown>
+             <PremisesCoverBreakdown>
+                 <PremisesCoverBreakdown_SiAmt Val="1500"/>
+                 <PremisesCoverBreakdown_Code Val="B205 M03" />
+             </PremisesCoverBreakdown>
+         </PremisesCover>
+     </Premises>
+     <RiskEvent>
+         <RiskEvent_TransactionType Val="B901 840" />
+         <RiskEvent_SchemeRef Val="50208104009" />
+         <RiskEvent_BrokerGroup Val="2" />
+         <RiskEvent_BrokeragePct Val="0" />
+     </RiskEvent>
+     <Trade>
+         <Trade_Code Val="B566 J65" />
+     </Trade>
+<WorkingInBusiness>
+     <WorkingInBusiness_EmployeeCode Val="B515 001"/>
+     <WorkingInBusiness_NoOfIndividuals Val="9"/>
+     <WorkingInBusiness_WagesSalaryAmt Val="10000"/>
+     <WorkingInBusiness_HeightLimit Val="4" />
+</WorkingInBusiness>
+<WorkingInBusiness>
+     <WorkingInBusiness_EmployeeCode Val="B515 004"/>
+     <WorkingInBusiness_NoOfIndividuals Val="0" />
+     <WorkingInBusiness_WagesSalaryAmt Val="12000"/>
+</WorkingInBusiness>
+<WorkingInBusiness>
+     <WorkingInBusiness_EmployeeCode Val="B515 219"/>
+     <WorkingInBusiness_NoOfIndividuals Val="5"/>
+     <WorkingInBusiness_WagesSalaryAmt Val="12000"/>
+     <WorkingInBusiness_HeightLimit Val="4" />
+</WorkingInBusiness>
+<WorkingInBusiness>
+     <WorkingInBusiness_EmployeeCode Val="B515 186"/>
+     <WorkingInBusiness_NoOfIndividuals Val="1"/>
+     <WorkingInBusiness_HeightLimit Val="4" />
+</WorkingInBusiness>
+<Vehicle>
+     <VehicleCover>
+         <VehicleCover_Code Val="B205 A06"/>
+         <VehicleCover_ExcessAmt Val="0"/>
+     </VehicleCover>
+</Vehicle>
+<Vehicle>
+     <VehicleCover>
+         <VehicleCover_Code Val="B205 M15"/>
+     </VehicleCover>
+</Vehicle>
+<Vehicle>
+     <VehicleCover>
+         <VehicleCover_Code Val="B205 X73"/>
+         <VehicleCover_CommissionStandardForCoverByBroker Val="0"/>
+         <VehicleCoverBreakdown>
+             <VehicleCoverBreakdown_Code Val="B205 U03"/>
+             <VehicleCoverBreakdown_SiAmt Val="20000"/>
+             <VehicleCoverBreakdown_ExcessAmt Val="2000000"/>
+         </VehicleCoverBreakdown>
+     </VehicleCover>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 002"/>
+     </VehicleUsage>
+     <Vehicle_NoOfDrivers Val="5"/>
+</Vehicle>
+<Vehicle>
+     <Vehicle_TypeCode Val="B900 008"/>
+     <Vehicle_NoOfVehicles Val="2"/>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 002"/>
+     </VehicleUsage>
+</Vehicle>
+<Vehicle>
+     <Vehicle_CategoryTypeCode Val="B10 30"/>
+     <Vehicle_CarryingCapacity Val="1"/>
+     <Vehicle_NoOfVehicles Val="1"/>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 002"/>
+     </VehicleUsage>
+</Vehicle>
+<Vehicle>
+     <Vehicle_CategoryTypeCode Val="B10 30"/>
+     <Vehicle_CarryingCapacity Val="2"/>
+     <Vehicle_NoOfVehicles Val="1"/>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 002"/>
+     </VehicleUsage>
+</Vehicle>
+<Vehicle>
+     <Vehicle_CategoryTypeCode Val="B10 60"/>
+     <Vehicle_CarryingCapacity Val="8"/>
+     <Vehicle_NoOfVehicles Val="1"/>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 002"/>
+     </VehicleUsage>
+</Vehicle>
+<Vehicle>
+     <Vehicle_TypeCode Val="B900 101"/>
+     <Vehicle_NoOfVehicles Val="2"/>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 002"/>
+     </VehicleUsage>
+</Vehicle>
+<Vehicle>
+     <Vehicle_TypeCode Val="B900 010"/>
+     <Vehicle_NoOfVehicles Val="4"/>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 002"/>
+     </VehicleUsage>
+</Vehicle>
+<Vehicle>
+     <Vehicle_Description Val="NamedDriversDiscount"/>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 002"/>
+     </VehicleUsage>
+</Vehicle>
+<Vehicle>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 011"/>
+     </VehicleUsage>
+     <Vehicle_TypeCode Val="B900 028"/>
+     <Vehicle_NoOfVehicles Val="1"/>
+</Vehicle>
+<Vehicle>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 011"/>
+     </VehicleUsage>
+     <Vehicle_TypeCode Val="B900 049"/>
+     <Vehicle_GrossVehicleWeight Val="2"/>
+     <Vehicle_NoOfVehicles Val="1"/>
+</Vehicle>
+<Vehicle>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 011"/>
+     </VehicleUsage>
+     <Vehicle_TypeCode Val="B900 049"/>
+     <Vehicle_GrossVehicleWeight Val="7"/>
+     <Vehicle_NoOfVehicles Val="1"/>
+</Vehicle>
+<Vehicle>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 011"/>
+     </VehicleUsage>
+     <Vehicle_TypeCode Val="B900 060"/>
+     <Vehicle_EngineCubicCapacity Val="500"/>
+     <Vehicle_NoOfVehicles Val="2"/>
+</Vehicle>
+<Vehicle>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 011"/>
+     </VehicleUsage>
+     <Vehicle_TypeCode Val="B900 060"/>
+     <Vehicle_EngineCubicCapacity Val="1000"/>
+     <Vehicle_NoOfVehicles Val="2"/>
+</Vehicle>
+<Vehicle>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 011"/>
+     </VehicleUsage>
+     <Vehicle_PermittedDriverCode Val="B134 H"/>
+     <Vehicle_NoOfDrivers Val="1"/>
+</Vehicle>
+<Vehicle>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 011"/>
+     </VehicleUsage>
+     <Vehicle_PermittedDriverCode Val="B134 I"/>
+     <Vehicle_NoOfDrivers Val="2"/>
+</Vehicle>
+<Vehicle>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 011"/>
+     </VehicleUsage>
+     <Vehicle_NoOfVehicles Val="7"/>
+     <Vehicle_CategoryTypeCode Val="B10 24"/>
+</Vehicle>
+<Vehicle>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 011"/>
+     </VehicleUsage>
+     <Vehicle_NoOfVehicles Val="6"/>
+     <Vehicle_CategoryTypeCode Val="B10 25"/>
+</Vehicle>
+<Vehicle>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 011"/>
+     </VehicleUsage>
+     <Vehicle_NoOfVehicles Val="5"/>
+     <Vehicle_CategoryTypeCode Val="B10 T6"/>
+</Vehicle>
+<Vehicle>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 011"/>
+     </VehicleUsage>
+     <Vehicle_NoOfVehicles Val="4"/>
+     <Vehicle_CategoryTypeCode Val="B10 AK"/>
+</Vehicle>
+<Vehicle>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 011"/>
+     </VehicleUsage>
+     <Vehicle_NoOfVehicles Val="3"/>
+     <Vehicle_CategoryTypeCode Val="B10 26"/>
+</Vehicle>
+<Vehicle>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 011"/>
+     </VehicleUsage>
+     <Vehicle_NoOfVehicles Val="2"/>
+     <Vehicle_CategoryTypeCode Val="B10 27"/>
+</Vehicle>
+<Vehicle>
+     <VehicleUsage>
+         <VehicleUsage_Code Val="B549 011"/>
+     </VehicleUsage>
+     <Vehicle_NoOfVehicles Val="1"/>
+     <Vehicle_CategoryTypeCode Val="B10 28"/>
+</Vehicle>
+ </PolData>
+</PolMessage>

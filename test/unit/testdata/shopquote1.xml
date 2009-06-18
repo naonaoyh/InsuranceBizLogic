@@ -1,0 +1,138 @@
+<ShopPackageQuoteNBRq>
+    <DateGenerated>2007-04-30</DateGenerated>
+    <TimeGenerated>14:20:01</TimeGenerated>
+    <StartDate>2007-04-30</StartDate>
+    <Insured>
+        <CompanyName>K1</CompanyName>
+        <CompanyStatusCode>
+            <Value>B646 013</Value>
+        </CompanyStatusCode>
+        <IndividualName>
+            <FirstForename>John</FirstForename>
+            <Surname>Smith</Surname>
+            <TitleCode>
+                <Value>B53 003</Value>
+            </TitleCode>
+        </IndividualName>
+        <Address>
+            <Postcode>BS1</Postcode>
+            <Line1>100 Park Avenue</Line1>
+            <Line2>Aztec East</Line2>
+            <Line3>Bristol</Line3>
+        </Address>
+        <Declaration>
+            <ConvictionsInd>
+                <Value>false</Value>
+            </ConvictionsInd>
+            <BankruptInd>
+                <Value>false</Value>
+            </BankruptInd>
+            <InsuranceInd>
+                <Value>false</Value>
+            </InsuranceInd>
+            <LossesInd>
+                <Value>false</Value>
+            </LossesInd>
+        </Declaration>
+    </Insured>
+    <EmployersLiabilityCover>
+        <CoverRequiredInd>
+            <Value>true</Value>
+        </CoverRequiredInd>
+    </EmployersLiabilityCover>
+    <LegalExpensesCover>
+        <CoverRequiredInd>
+            <Value>true</Value>
+        </CoverRequiredInd>
+    </LegalExpensesCover>
+    <FidelityGuaranteeCover>
+        <CoverRequiredInd>
+            <Value>true</Value>
+        </CoverRequiredInd>
+        <CoverDetail>
+            <ResponsibleEmployees>
+                <Wages>20</Wages>
+            </ResponsibleEmployees>
+        </CoverDetail>
+    </FidelityGuaranteeCover>
+    <Premises>
+        <Id>1</Id>
+        <Trade>
+            <Code>
+                <Value>B566 K16</Value>
+            </Code>
+        </Trade>
+        <OccupancyCode>
+            <ShortDescription>String</ShortDescription>
+            <Value>B533 001</Value>
+        </OccupancyCode>
+        <SubsidenceInd>
+            <Value>false</Value>
+        </SubsidenceInd>
+        <Address>
+            <Postcode>BS32 4TR</Postcode>
+            <Line1>400 Park Avenue</Line1>
+            <Line2>Aztec West</Line2>
+            <Line3>New Kube Test Field</Line3>
+            <YearEstablishedAtAddress>2</YearEstablishedAtAddress>
+        </Address>
+        <FloodingHistoryInd>
+            <Value>false</Value>
+        </FloodingHistoryInd>
+        <TradingName>
+            <Name>Polaris</Name>
+        </TradingName>
+        <SoleOccupantInd>
+            <Value>true</Value>
+        </SoleOccupantInd>
+        <MoneyCover>
+            <CoverDetail>
+                <CoverBreakdown>
+                    <Code>
+                        <Value>B205 M06</Value>
+                    </Code>
+                </CoverBreakdown>
+                <CoverBreakdown>
+                    <Code>
+                        <Value>B205 M01</Value>
+                    </Code>
+                </CoverBreakdown>
+                <CoverBreakdown>
+                    <Code>
+                        <Value>B205 240</Value>
+                    </Code>
+                </CoverBreakdown>
+                <CoverBreakdown>
+                    <Code>
+                        <Value>B205 M03</Value>
+                    </Code>
+                </CoverBreakdown>
+                <CoverBreakdown>
+                    <Code>
+                        <Value>B205 M05</Value>
+                    </Code>
+                </CoverBreakdown>
+            </CoverDetail>
+        </MoneyCover>
+        <SelfContainedInd>
+            <Value>true</Value>
+        </SelfContainedInd>
+        <ContentsCover>
+            <CoverDetail>
+                <OtherStock>
+                    <SumInsured>
+                        <Amount>25000</Amount>
+                    </SumInsured>
+                </OtherStock>
+                <OtherContents>
+                    <SumInsured>
+                        <Amount>1000</Amount>
+                    </SumInsured>
+                </OtherContents>
+                <Excess>
+                    <Amount>250</Amount>
+                </Excess>
+            </CoverDetail>
+        </ContentsCover>
+    </Premises>
+</ShopPackageQuoteNBRq>

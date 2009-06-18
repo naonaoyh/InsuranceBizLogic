@@ -1,0 +1,9 @@
+Files in this directory are used when building the bdb, bdbxml and their wrapper in a structured way under BDB directory containing:-
+bdb-0.6.3 (the ruby wrappers)
+db-4.6.21
+dbxml-2.4.13
+xerces-2.1.2
+xqilla-2.1.2
+
+myconfig is a new nyconfig with separate paths for each sub product
+buildit.sh lists the commands to build each component and reference its dependent sub-components

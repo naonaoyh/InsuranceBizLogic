@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:tns="http://com/csc/dip/webservice/core/"
+    xmlns:types="http://com/csc/dip/webservice/core/encodedTypes"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <soap:Body soap:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+        <tns:process>
+            <in0 href="#id1"/>
+        </tns:process>
+        <soapenc:Array id="id1" xmlns:q1="http://core.webservice.dip.csc.com"
+            soapenc:arrayType="q1:ProductRequest[2]">
+            <Item href="#id2"/>
+            <Item href="#id3"/>
+        </soapenc:Array>
+        <q2:ProductRequest id="id2" xsi:type="q2:ProductRequest"
+            xmlns:q2="http://core.webservice.dip.csc.com">
+            <productName xsi:type="xsd:string">travel</productName>
+            <store xsi:type="xsd:boolean">false</store>
+            <traceMode xsi:type="xsd:boolean">false</traceMode>
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <actions href="#id4"/>
+        </q2:ProductRequest>
+        <q3:ProductRequest id="id3" xsi:type="q3:ProductRequest"
+            xmlns:q3="http://core.webservice.dip.csc.com">
+            <productName xsi:type="xsd:string">travel</productName>
+            <store xsi:type="xsd:boolean">false</store>
+            <traceMode xsi:type="xsd:boolean">false</traceMode>
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <actions href="#id5"/>
+        </q3:ProductRequest>
+        <soapenc:Array id="id4" xmlns:q4="http://core.webservice.dip.csc.com"
+            soapenc:arrayType="q4:VpmsAction[1]">
+            <Item href="#id6"/>
+        </soapenc:Array>
+        <soapenc:Array id="id5" xmlns:q5="http://core.webservice.dip.csc.com"
+            soapenc:arrayType="q5:VpmsAction[2]">
+            <Item href="#id7"/>
+            <Item href="#id8"/>
+        </soapenc:Array>
+        <q6:ComputeAction id="id6" xsi:type="q6:ComputeAction"
+            xmlns:q6="http://core.webservice.dip.csc.com">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string">P_Premium</name>
+        </q6:ComputeAction>
+        <q7:SetAction id="id7" xsi:type="q7:SetAction" xmlns:q7="http://core.webservice.dip.csc.com">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string">NumberPersons</name>
+            <value xsi:type="xsd:string">5</value>
+        </q7:SetAction>
+        <q8:ComputeAction id="id8" xsi:type="q8:ComputeAction"
+            xmlns:q8="http://core.webservice.dip.csc.com">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string">P_Premium</name>
+        </q8:ComputeAction>
+    </soap:Body>
+</soap:Envelope>

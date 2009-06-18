@@ -1,0 +1,29 @@
+# directories for cpp
+
+$dbbase = "/usr/local/BDB/db-4.6.21"
+$dbxmlbase = "/usr/local/BDB/dbxml-2.4.13"
+$xercescbase = "/usr/local/BDB/xerces-2.8.0"
+$xqillabase = "/usr/local/BDB/xqilla-2.1.2"
+
+$include = {
+   'db' => "#{$dbbase}/include",
+   'dbxml' => "#{$dbxmlbase}/include",
+   'xercesc' => "#{$xercescbase}/include/xercesc",
+   'xqilla' => "#{$xqillabase}/include/xqilla"
+}
+
+# [directory, library] for ld
+
+# it's important to have xercesc compiled with -rnone 
+# (i.e. *without* threads)
+
+$library = {
+   'db' => ["#{$dbbase}/lib", ["db-4.6", "db_cxx-4.6"]],
+   'dbxml' => ["#{$dbxmlbase}/lib", "dbxml-2.4"],
+   'xqilla' => ["#{$xqillabase}/lib", "xqilla"],
+   'xercesc' => ["#{$xercescbase}/lib", "xerces-c"],
+}
+
+# order for ld (don't change it)
+
+$order = ['dbxml', 'db', 'xqilla', 'xercesc']

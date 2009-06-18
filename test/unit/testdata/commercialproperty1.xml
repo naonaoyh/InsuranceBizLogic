@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+    xmlns:tns="http://com/csc/dip/webservice/core/"
+    xmlns:types="http://com/csc/dip/webservice/core/encodedTypes"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:q1="http://core.webservice.dip.csc.com">
+    <soap:Body soap:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+        <tns:process>
+            <in0 href="#id1"/>
+        </tns:process>
+        <soapenc:Array id="id1" soapenc:arrayType="q1:ProductRequest[1]">
+            <Item href="#id3"/>
+        </soapenc:Array>
+        <q1:ProductRequest id="id3" xsi:type="q1:ProductRequest">
+            <productName xsi:type="xsd:string">CommercialPropertyPremiums</productName>
+            <store xsi:type="xsd:boolean">false</store>
+            <traceMode xsi:type="xsd:boolean">false</traceMode>
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <actions href="#id5"/>
+        </q1:ProductRequest>
+        <q1:SetAction id="id7" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_Retailer_ContentsCover_CoverDetail_OtherContents_SumInsured_Amount</name>
+            <value xsi:type="xsd:string">3000000</value>
+        </q1:SetAction>
+        <q1:SetAction id="id9" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_Retailer_ContentsCover_CoverDetail_OtherStock_SumInsured_Amount</name>
+            <value xsi:type="xsd:string">1000000</value>
+        </q1:SetAction>
+        <q1:SetAction id="id10" xsi:type="q1:SetAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >A_CommercialProperty_Retailer_ContentsCover_CoverDetail_TargetStock_SumInsured_Amount</name>
+            <value xsi:type="xsd:string">2000000</value>
+        </q1:SetAction>
+        <q1:ComputeAction id="id8" xsi:type="q1:ComputeAction">
+            <useUI xsi:type="xsd:boolean">false</useUI>
+            <name xsi:type="xsd:string"
+                >F_CommercialProperty_Retailer_ContentsCover_CoverDetail_PremiumQuoteBreakdown_GrossAmount</name>
+        </q1:ComputeAction>
+        <soapenc:Array id="id5" soapenc:arrayType="q1:VpmsAction[1]">
+            <Item href="#id7"/>
+            <Item href="#id9"/>
+            <Item href="#id10"/>
+            <Item href="#id8"/>
+        </soapenc:Array>
+    </soap:Body>
+</soap:Envelope>

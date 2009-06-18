@@ -1,0 +1,16 @@
+## YAML Template.
+python_xmldiff_path: /usr/local/bin/xmldiff
+##isolda fusion
+##rte_restful_ip: 192.168.90.128
+##NAT local fusion
+use_rating_engine: false
+rte_restful_ip: 192.168.135.128
+vpms_ip: 192.168.1.8
+##DHCP local fusion
+##rte_restful_ip: 192.168.1.176
+##
+##the following dbpath definition ../../../IABDB will equate to a directory
+##that is a sibling of the directory that owns the ruby app
+dbpath: "/Users/mawdo/WIP/IABDB"
+dbcontainer: "quotes.dbxml"
+DSL_ROOT: "/Users/mawdo/WIP/IAB/RailsApp/app/dynamic/products"
