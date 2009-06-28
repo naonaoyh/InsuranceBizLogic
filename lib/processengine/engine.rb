@@ -164,6 +164,12 @@ class PEngine
     when "CompletedPayment"
       complete_payment(params)
 
+    when "CaptureInputXML"
+      eval(deriveActiveRecordDefinitionOfProduct(session[:product]))
+      xml = createXMLMessage(session[:product],params,false) { |k,v| "<#{k}>#{v}</#{k}>" }
+      File.open("dump.xml", 'w') {|f| f.write(xml) }
+
+
     else
       puts "**********> #{process} logic performed once it has been written <**********"
     end
