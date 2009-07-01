@@ -1,0 +1,5 @@
+ declare namespace xupdate="http://www.xmldb.org/xupdate";
+for $result in collection("quotes.dbxml")/Telenexus
+where $result//Profile/PersonalDetails/Person/ContactDetail/Email = "EMAIL"
+return
+$result

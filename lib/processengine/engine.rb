@@ -131,6 +131,12 @@ class PEngine
       xml = persist.get(params[:choosen][:one])
       prepareModels(session[:product],xml)
 
+    when "Authenticate"
+      eval(deriveActiveRecordDefinitionOfProduct(session[:product]))
+      open("#{File.dirname(__FILE__)}/../bizLogic/xquery2") {|f| @query = f.read }
+      results = persist.find(@query.gsub('EMAIL',"#{params[:User][:User]}"))
+      prepareModels(session[:product],results[0]) if results and results[0]
+
     when "SectionRating"
       "1553.25"
 
