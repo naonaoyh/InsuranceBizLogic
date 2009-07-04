@@ -132,9 +132,10 @@ class PEngine
       prepareModels(session[:product],xml)
 
     when "Authenticate"
+      session[:user_email] = params[:User][:User] if params[:User] and params[:User][:User]
       eval(deriveActiveRecordDefinitionOfProduct(session[:product]))
       open("#{File.dirname(__FILE__)}/../bizLogic/xquery2") {|f| @query = f.read }
-      results = persist.find(@query.gsub('EMAIL',"#{params[:User][:User]}"))
+      results = persist.find(@query.gsub('EMAIL',session[:user_email]))
       prepareModels(session[:product],results[0]) if results and results[0]
 
     when "SectionRating"
