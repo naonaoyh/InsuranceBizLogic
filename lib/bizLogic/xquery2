@@ -2,4 +2,4 @@
 for $result in collection("quotes.dbxml")/Telenexus
 where $result//Profile/PersonalDetails/Client/Contact/Email = "EMAIL"
 return
-$result
+$result/dbxml:metadata("dbxml:name")

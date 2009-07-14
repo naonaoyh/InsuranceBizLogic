@@ -133,11 +133,18 @@ class PEngine
 
     when "Authenticate"
       begin
-        session[:user_email] = params[:User][:User] if params[:User] and params[:User][:User]
+        if params[:User] and params[:User][:User] and params[:User][:User].length > 0
+          session[:user_email] = params[:User][:User]
+        elsif params[:ProfilePersonalDetailsClientContact] and params[:ProfilePersonalDetailsClientContact][:Email]
+          session[:user_email] = params[:ProfilePersonalDetailsClientContact][:Email]
+        end
+
         eval(deriveActiveRecordDefinitionOfProduct(session[:product]))
         open("#{File.dirname(__FILE__)}/../bizLogic/xquery2") {|f| @query = f.read }
         results = persist.find(@query.gsub('EMAIL',session[:user_email]))
-        prepareModels(session[:product],results[0]) if results and results[0]
+        key = results[0]
+        xml = persist.get(key)
+        prepareModels(session[:product],xml) if results and results[0] and xml
       rescue
         if !session[:user_email]
           raise "Credentials missing - you have not logged in"
@@ -147,20 +154,20 @@ class PEngine
 
     when "SaveProfile"
       begin
-        if params[:User] and params[:User][:User]
-          session[:user_email] = params[:User][:User]
-          params[:ProfilePersonalDetailsClientContact] = HashWithIndifferentAccess.new
-          params[:ProfilePersonalDetailsClientContact][:Email] = params[:User][:User]
-        end
+        session[:user_email] = params[:ProfilePersonalDetailsClientContact][:Email]
         eval(deriveActiveRecordDefinitionOfProduct(session[:product]))
         xml = createXMLMessage(session[:product],params,false) { |k,v| "<#{k}>#{v}</#{k}>" }
         open("#{File.dirname(__FILE__)}/../bizLogic/xquery2") {|f| @query = f.read }
         results = persist.find(@query.gsub('EMAIL',session[:user_email]))
+        key = nil
         if !results
           key = persist.create_key_and_doc(xml)
-          results = persist.find(@query.gsub('EMAIL',session[:user_email]))
+        else
+          key = results[0]
+          persist.put(key,xml)
         end
-        prepareModels(session[:product],results[0])
+        xml = persist.get(key)
+        prepareModels(session[:product],xml)
       rescue
         if !session[:user_email]
           raise "Credentials missing for new customer"
