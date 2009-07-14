@@ -145,6 +145,30 @@ class PEngine
         raise "An error occurred during the authentication process"
       end
 
+    when "SaveProfile"
+      begin
+        if params[:User] and params[:User][:User]
+          session[:user_email] = params[:User][:User]
+          params[:ProfilePersonalDetailsClientContact] = HashWithIndifferentAccess.new
+          params[:ProfilePersonalDetailsClientContact][:Email] = params[:User][:User]
+        end
+        eval(deriveActiveRecordDefinitionOfProduct(session[:product]))
+        xml = createXMLMessage(session[:product],params,false) { |k,v| "<#{k}>#{v}</#{k}>" }
+        open("#{File.dirname(__FILE__)}/../bizLogic/xquery2") {|f| @query = f.read }
+        results = persist.find(@query.gsub('EMAIL',session[:user_email]))
+        if !results
+          key = persist.create_key_and_doc(xml)
+          results = persist.find(@query.gsub('EMAIL',session[:user_email]))
+        end
+        prepareModels(session[:product],results[0])
+      rescue
+        if !session[:user_email]
+          raise "Credentials missing for new customer"
+        end
+        raise "An error occurred whilst saving a new profile"
+      end
+
+
     when "SectionRating"
       "1553.25"
 
