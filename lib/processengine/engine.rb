@@ -17,6 +17,8 @@ require 'bizLogic/VPMSHelper'
 
 require 'processengine/HashEnhancement'
 
+require 'rexml/document'
+
 class PEngine
   include XMLDiff
   include Marshaller
@@ -26,6 +28,7 @@ class PEngine
   include Payment
   include RefineQuote
   include VPMSHelper
+  include REXML
 
   PRODUCTMODELS = Hash.new
   
@@ -144,7 +147,10 @@ class PEngine
         results = persist.find(@query.gsub('EMAIL',session[:user_email]))
         key = results[0]
         xml = persist.get(key)
-        prepareModels(session[:product],xml) if results and results[0] and xml
+        doc = Document.new(xml)
+        node = doc.elements['Telenexus/Profile/PersonalDetails/Client']
+        node.parent.delete(node) if node and session[:user_email].index("telenexus.com")
+        prepareModels(session[:product],doc.to_s)
       rescue
         if !session[:user_email]
           raise "Credentials missing - you have not logged in"
