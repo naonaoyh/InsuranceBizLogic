@@ -36,15 +36,7 @@ class PEngine
       if (PRODUCTMODELS.has_key?(product))
         productModel = PRODUCTMODELS[product.to_sym]
       else
-        require 'ProductInterpreter'
-        oilfile = File.join("#{DY_MODELS}/#{product}/DSL/product.oil")
-        open(oilfile) {|f| @contents = f.read }
-        dsl = @contents.to_s
-        if (!dsl.include?("product :#{product}"))
-          raise "#{DY_MODELS}/#{product}/DSL/product.oil does NOT contain a product defintion for #{product}"
-        end
-        productModel = ProductInterpreter.execute(dsl)
-        PRODUCTMODELS[product.to_sym] = productModel
+        PRODUCTMODELS[product.to_sym] = getRAILSClassRequiresForProductModelFromOilDef(product)
       end
       productModel
   end
