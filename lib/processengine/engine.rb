@@ -19,6 +19,8 @@ require 'processengine/HashEnhancement'
 
 require 'rexml/document'
 
+require 'kerrylondon'
+
 class PEngine
   include XMLDiff
   include Marshaller
@@ -34,11 +36,10 @@ class PEngine
   
   def deriveActiveRecordDefinitionOfProduct(product)
       if (PRODUCTMODELS.has_key?(product))
-        productModel = PRODUCTMODELS[product.to_sym]
+        return PRODUCTMODELS[product.to_sym]
       else
-        PRODUCTMODELS[product.to_sym] = getRAILSClassRequiresForProductModelFromOilDef(product)
+        return getRAILSClassRequiresForProductModelFromOilDef(product)
       end
-      productModel
   end
 
   def addDefaults(p1)
@@ -73,7 +74,18 @@ class PEngine
     end
     return p1
   end
-  
+
+  def drill(params,tweak)
+    params.each do |p,v|
+      if (v.class.to_s == "HashWithIndifferentAccess")
+        drill(v,tweak)
+      elsif Kerrylondon.mapping.has_key?(p)
+        newkey = Kerrylondon.mapping[p]
+        tweak[newkey] = v
+      end
+    end
+  end
+
   def push(session,process,params)
     package = 'CommercialProperty'
     persist = Persist.instance
@@ -101,6 +113,15 @@ class PEngine
       prepareModels(session[:product],xml)
       #cmd = SBroker.RequestRatingService("NB",session[:product],true,false,false)
       #quote = cmd.call(xml)
+
+    when "GetBrokerQuotes"
+      eval(deriveActiveRecordDefinitionOfProduct(session[:product]))      
+      dataTweak = Hash.new
+      drill(params,dataTweak)
+      #dataTweaks contains values that override the kerry london adapter defaults
+      result = Kerrylondon.makeQuote("Tony Lorriman","liability1","CSP",false,Kerrylondon.keyfacts(dataTweak))
+      premiums = "<ContractorPlant>#{result}</ContractorPlant>"
+      prepareModels(session[:product],premiums)
 
     when "RefineNBQuote"
       eval(deriveActiveRecordDefinitionOfProduct(session[:product]))
