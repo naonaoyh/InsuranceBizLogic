@@ -120,7 +120,7 @@ class PEngine
       drill(params,dataTweak)
       #dataTweaks contains values that override the kerry london adapter defaults
       result = Kerrylondon.makeQuote("Tony Lorriman","liability1","CSP",false,Kerrylondon.keyfacts(dataTweak))
-      premiums = "<ContractorPlant>#{result}</ContractorPlant>"
+      premiums = "<ContractorPlant><Quotes>#{result}#{result}</Quotes></ContractorPlant>"
       prepareModels(session[:product],premiums)
 
     when "RefineNBQuote"
