@@ -88,7 +88,6 @@ class PEngine
 
   def push(session,process,params)
     package = 'CommercialProperty'
-    persist = Persist.instance
 
     case process
     when "ProcessDefinition"
@@ -101,6 +100,7 @@ class PEngine
     when "GetNBQuote"
       eval(deriveActiveRecordDefinitionOfProduct(session[:product]))
       xml = createXMLMessage(session[:product],params,false) { |k,v| "<#{k}>#{v}</#{k}>" }
+      persist = Persist.instance
       key = persist.put("UUID",xml)
       session[:policyKey] = key
 
@@ -125,6 +125,7 @@ class PEngine
 
     when "RefineNBQuote"
       eval(deriveActiveRecordDefinitionOfProduct(session[:product]))
+      persist = Persist.instance
       origxml = persist.get(session[:policyKey])
       h = prepareModels(session[:product],origxml)
       params = h.deep_merge(params)
@@ -144,6 +145,7 @@ class PEngine
       executeSearch(session[:product],params)      
 
     when "FindPolicyOrQuote"
+      persist = Persist.instance
       xml = persist.get(params[:choosen][:one])
       prepareModels(session[:product],xml)
 
@@ -157,6 +159,7 @@ class PEngine
 
         eval(deriveActiveRecordDefinitionOfProduct(session[:product]))
         open("#{File.dirname(__FILE__)}/../bizLogic/xquery2") {|f| @query = f.read }
+        persist = Persist.instance
         results = persist.find(@query.gsub('EMAIL',session[:user_email]))
         key = results[0]
         xml = persist.get(key)
@@ -177,6 +180,7 @@ class PEngine
         eval(deriveActiveRecordDefinitionOfProduct(session[:product]))
         xml = createXMLMessage(session[:product],params,false) { |k,v| "<#{k}>#{v}</#{k}>" }
         open("#{File.dirname(__FILE__)}/../bizLogic/xquery2") {|f| @query = f.read }
+        persist = Persist.instance
         results = persist.find(@query.gsub('EMAIL',session[:user_email]))
         key = nil
         if !results
@@ -199,11 +203,12 @@ class PEngine
       "1553.25"
 
     when "MTAReason"
+      persist = Persist.instance
       xml = persist.get(session[:policyKey])
       prepareModels(session[:product],xml)      
 
     when "GetMTAQuote"
-      #db = Persist.instance
+      persist = Persist.instance
       origImage = persist.get(session[:policyKey])
       #TODO: the origImage will need any MTAs layering on there
       xml = createXMLMessage(session[:product],params,false) { |k,v| "<#{k}>#{v}</#{k}>" }      
@@ -212,6 +217,7 @@ class PEngine
 
     when "PolicyDocumentation"
        #get XML quote/policy document
+      persist = Persist.instance
       xml = persist.get(session[:policyKey])
       #call the rating engine (again!) until we've preserved the quote
       cmd = SBroker.RequestRatingService("NB",session[:product],true,false,false)
