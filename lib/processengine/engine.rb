@@ -1,7 +1,6 @@
 # Copyright (c) 2007-2008 Orangery Technology Limited 
 # You can redistribute it and/or modify it under the same terms as Ruby.
 #
-require 'models/persist'
 require 'cgi'
 require 'net/http' 
 
@@ -100,6 +99,7 @@ class PEngine
     when "GetNBQuote"
       eval(deriveActiveRecordDefinitionOfProduct(session[:product]))
       xml = createXMLMessage(session[:product],params,false) { |k,v| "<#{k}>#{v}</#{k}>" }
+      require 'models/persist'
       persist = Persist.instance
       key = persist.put("UUID",xml)
       session[:policyKey] = key
@@ -125,6 +125,7 @@ class PEngine
 
     when "RefineNBQuote"
       eval(deriveActiveRecordDefinitionOfProduct(session[:product]))
+      require 'models/persist'
       persist = Persist.instance
       origxml = persist.get(session[:policyKey])
       h = prepareModels(session[:product],origxml)
@@ -145,6 +146,7 @@ class PEngine
       executeSearch(session[:product],params)      
 
     when "FindPolicyOrQuote"
+      require 'models/persist'
       persist = Persist.instance
       xml = persist.get(params[:choosen][:one])
       prepareModels(session[:product],xml)
@@ -159,6 +161,7 @@ class PEngine
 
         eval(deriveActiveRecordDefinitionOfProduct(session[:product]))
         open("#{File.dirname(__FILE__)}/../bizLogic/xquery2") {|f| @query = f.read }
+        require 'models/persist'
         persist = Persist.instance
         results = persist.find(@query.gsub('EMAIL',session[:user_email]))
         key = results[0]
@@ -180,6 +183,7 @@ class PEngine
         eval(deriveActiveRecordDefinitionOfProduct(session[:product]))
         xml = createXMLMessage(session[:product],params,false) { |k,v| "<#{k}>#{v}</#{k}>" }
         open("#{File.dirname(__FILE__)}/../bizLogic/xquery2") {|f| @query = f.read }
+        require 'models/persist'
         persist = Persist.instance
         results = persist.find(@query.gsub('EMAIL',session[:user_email]))
         key = nil
@@ -203,11 +207,13 @@ class PEngine
       "1553.25"
 
     when "MTAReason"
+      require 'models/persist'
       persist = Persist.instance
       xml = persist.get(session[:policyKey])
       prepareModels(session[:product],xml)      
 
     when "GetMTAQuote"
+      require 'models/persist'
       persist = Persist.instance
       origImage = persist.get(session[:policyKey])
       #TODO: the origImage will need any MTAs layering on there
@@ -217,6 +223,7 @@ class PEngine
 
     when "PolicyDocumentation"
        #get XML quote/policy document
+      require 'models/persist'
       persist = Persist.instance
       xml = persist.get(session[:policyKey])
       #call the rating engine (again!) until we've preserved the quote
